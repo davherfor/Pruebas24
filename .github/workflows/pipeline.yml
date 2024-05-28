@@ -58,3 +58,4 @@ jobs:
      chmod +x gradlew 
      ./gradlew publish
   - run: echo "davherfor"
+
