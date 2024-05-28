@@ -44,6 +44,10 @@ jobs:
  
  Publish:
   runs-on: ubuntu-latest
+  env:
+   GITHUB_LOGIN: ${{ github.actor }}
+   GITHUB_PACKAGES: ${{ secrets.TOKEN_GITHUB }}
+   GITHUB_OAUTH: ${{ secrets.TOKEN_GITHUB }}
   needs: Test
   steps:
   - name: Clonando el repositorio y estableciendo el espacio de trabajo
