@@ -19,7 +19,9 @@ jobs:
         java-version: 11
 
     - name: Build with Gradle
-      run: ./gradlew build
+      run: |
+        chmod +x gradlew
+        ./gradlew build
       env:
         USERNAME_GITHUB: ${{ secrets.GITHUB_USERNAME }}
         TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
@@ -28,7 +30,9 @@ jobs:
       run: echo "davherfor"
 
     - name: Test with Gradle
-      run: ./gradlew test
+      run:  |
+        chmod +x gradlew
+        ./gradlew test
       env:
         USERNAME_GITHUB: ${{ secrets.GITHUB_USERNAME }}
         TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
