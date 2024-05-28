@@ -16,7 +16,7 @@ plugins {
     //para poder publicar paquetes en github
     id 'maven-publish'
     //Plugin para análisis estático de código
-    //id "nebula.lint" version "17.7.0"
+   // id "nebula.lint" version "17.7.0"
 }
 version = '0.0'
 tasks.withType(JavaCompile) {
@@ -90,7 +90,8 @@ dependencies {
     testImplementation(platform('org.junit:junit-bom:5.8.2'))
     //JAVADOC: https://www.javadoc.io/doc/org.junit.jupiter/junit-jupiter-api/latest/index.html
     testImplementation('org.junit.jupiter:junit-jupiter')
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
 }
 
 test {
